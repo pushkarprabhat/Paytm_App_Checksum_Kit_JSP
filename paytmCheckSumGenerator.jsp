@@ -1,7 +1,8 @@
-<%@page import="com.google.gson.GsonBuilder"%>
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@page import="com.google.gson.Gson"%>
+<%@page import="com.google.gson.GsonBuilder"%>
 <%@ page import="java.util.*,
 				java.net.URLEncoder,
 				com.paytm.merchant.CheckSumServiceHelper"%>
@@ -25,7 +26,7 @@ while(paramNames.hasMoreElements()) {
 	String paramValue = (String)mapData.get(paramName)[0];
 
 	//// below code snippet is mandatory, so that no one can use your checksumgeneration url for other purpose .
-	if(paramValue.toLowerCase().contains("refund"){
+	if(paramValue.toLowerCase().contains("refund")){
 		continue;
 	}
 
